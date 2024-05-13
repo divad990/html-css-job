@@ -1,0 +1,243 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background:  #dbcfc3 ;
+	color: #fff; /*Color del texto blanco*/
+	}
+
+#contenedor{
+	width: 960px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+header {
+	position: relative;
+	height: 150px;
+	overflow: hidden;
+}
+
+header::before {
+	content: ""; /* Permite que quede por detras del texto */
+	position: absolute; /* No estoy seguro porque pero permite que quede detras del texto */
+	height: 100%;
+	width: 100%;
+	background-image: url('./img/pastel.jpg');
+	background-size: cover; /* De que manera la imagen se comporta */
+	background-repeat: no-repeat; /* Que no se cree mosaico repitiendose */
+	filter: blur(2px); /* Efecto de desenfoque */
+	z-index: -1; /* El orden del objeto */
+}
+
+header h1{
+	font-size: 50px;
+	color: #7ab1a3;
+	text-shadow: 4px 4px 7px black; /* Sombra de la letra */
+	text-align: center;
+	line-height: 150px;
+	z-index: 1; /* El orden del objeto */
+}
+
+nav{
+	position: relative;
+	z-index: 2;
+	background: #fdbc96;
+	height: 60px;
+	font-style: italic;
+}
+
+#contenido {
+	width: 700px;
+	height: 500px;
+	float: left;
+	background: #FDBC96;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+aside{
+	width: 250px;
+	height: 500px;
+	background: #dbcfc3;
+	margin-top: 10px;
+	float: right;
+}
+
+article {
+	height: 100%;
+	text-align: center;
+}
+
+.aside-gif {
+	width: 230px;
+	height: 450px;
+}
+
+footer {
+    background: #dbcfc3;
+    clear: both;
+    position: relative;
+
+}
+
+.e {
+	margin: 50px 100px 100px 500px;	
+}
+
+#contenedor-imagenes {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+	margin-top: 20px;
+}
+
+#contenedor-gif {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 245px;
+	height: 500px;
+}
+
+#contenedor-gif img {
+	width: 100%;
+	height: 100%;
+}
+
+/* ---------------  MENÚ  --------------- */
+
+#menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0px;
+	display: flex;
+    text-align: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+#menu ul li a {
+    display: block;
+    color: black;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: Verdana;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+#menu ul li {
+    float: left;
+    background-color: #c3e6e6;
+    position: relative;
+	padding: 5px 5px ;
+	border-radius: 15px;
+	margin-right: 10px;
+}
+
+#menu ul li:hover {
+    background-color: #94afaf;
+}
+
+/* ---------------  SUB-MENÚ  --------------- */
+
+#menu ul ul {
+	display: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%); /* Esto esa para corregir la posición del menu hover junto al left y al top, de esta manera queda centrado justo debajo del elemento */
+	top: 20px;
+	padding: 15px;
+	width: 125px;
+}
+
+#menu ul ul li {
+	color: black;
+	font-family: verdana;
+	padding: 5px 10px;
+	margin: 3px;
+}
+
+#menu ul li:hover > ul {
+	display: block;
+}
+
+/* ---------------  TABLA PRINCIPAL  --------------- */
+
+#tablaprincipal {
+    margin: 10px;
+	color: #333333;
+}
+
+#tablaprincipal td {
+	padding: 20px;
+	font-family: Georgia, serif;
+}
+
+#table-title {
+	font-size: 25px;
+	font-weight: 800;
+	color: #654321;
+	text-shadow: white 2px 2px 5px;
+	font-family: Georgia, serif;
+}
+
+/* ---------------  IMÁGENES  --------------- */
+
+#contenedor-imagenes img {
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+}
+
+/* ---------------  EFECTO PARPADEO TEXTO PRUEBA  --------------- */
+
+/*
+
+.text {
+	font-size:28px;
+	font-family:helvetica;
+	font-weight:bold;
+	color:#71d90b;
+	text-transform:uppercase;
+  }
+  .parpadea {
+	
+	animation-name: parpadeo;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  
+	-webkit-animation-name:parpadeo;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	 100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+	0% { opacity: 1.0; }
+	 50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+  }
+*/
